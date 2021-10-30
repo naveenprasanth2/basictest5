@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -72,7 +73,7 @@ public class BaseSteps {
 		return js.getString(path);
 	}
 	
-	public HashMap<String,String> queryParams(){
+	public Map<String,String> queryParams(){
 		HashMap<String,String> queryValue = new HashMap<>();
 		queryValue.put("client_id", "692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com");
 		queryValue.put("client_secret", "erZOWM9g3UtwNRj340YYaK_W");
