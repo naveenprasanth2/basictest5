@@ -1,9 +1,6 @@
 package stepDefinitions;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 
@@ -14,14 +11,12 @@ import io.cucumber.java.en.When;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
-public class RahulShettyLogin {
+public class RahulShettyLogin extends BaseSteps{
 
-	private static WebDriver driver;
+	private WebDriver driver;
 	private HomePage homePage;
 	private LoginPage loginPage;
 	private BaseSteps baseSteps;
-	private FileReader reader;
-	private Properties prop;
 
 	public RahulShettyLogin() {
 		this.loginPage = new LoginPage();
@@ -31,9 +26,7 @@ public class RahulShettyLogin {
 
 	@Given("I initialize the browser")
 	public void i_initialize_the_browser() throws IOException {
-		reader = new FileReader(System.getProperty("user.dir") + "\\config\\data.properties");
-		prop = new Properties();
-		prop.load(reader);
+		propertiesFileReader();
 		driver = baseSteps.getDriver(prop.getProperty("browser"));
 	}
 
