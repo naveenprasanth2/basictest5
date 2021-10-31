@@ -18,6 +18,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BasicTest {
 	@Test
 	public void test() throws IOException{
@@ -27,7 +29,7 @@ public class BasicTest {
 	String reportPath = System.getProperty("user.dir") + "\\src\\main\\java\\reports\\test1.html";
 
 
-	System.setProperty("webdriver.chrome.driver", chromePath);
+	WebDriverManager.chromedriver().setup();
 	DesiredCapabilities dc = new DesiredCapabilities();
 	dc.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 	dc.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
