@@ -35,7 +35,6 @@ public class BasicTest {
 	dc.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 
 	ChromeOptions co = new ChromeOptions();
-	co.setBinary(chromePath);
 	co.addArguments("--headless");
 	co.addArguments("--window-size=1920,1080");
 	co.addArguments("--disable-infobars");
