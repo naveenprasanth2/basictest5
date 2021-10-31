@@ -24,7 +24,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class AllTest {
 	@Test
 	public void test() throws InterruptedException {
-		WebDriverManager.chromedriver().setup();
+		String chromePath = System.getProperty("user.dir") + "\\src\\main\\java\\resources\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", chromePath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		driver.manage().window().maximize();
