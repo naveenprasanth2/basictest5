@@ -3,7 +3,6 @@ package stepDefinitions;
 import static io.restassured.RestAssured.given;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 import org.openqa.selenium.Keys;
 

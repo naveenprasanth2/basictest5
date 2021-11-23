@@ -46,7 +46,7 @@ public class AllTest {
 				}
 			}
 		});
-
+		System.out.println(foo);
 		driver.findElements(By.xpath("//li[@class='ui-menu-item'] //div")).stream()
 				.filter(x -> x.getText().equalsIgnoreCase("indonesia")).findAny().ifPresent(x -> x.click());
 		WebElement sele = driver.findElement(By.cssSelector("select#dropdown-class-example"));

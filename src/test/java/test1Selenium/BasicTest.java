@@ -24,7 +24,6 @@ public class BasicTest {
 	@Test
 	public void test() throws IOException{
 
-	String chromePath = System.getProperty("user.dir") + "\\src\\main\\java\\resources\\chromedriver.exe";
 	String screenPath = System.getProperty("user.dir") + "\\src\\main\\java\\screenshots\\test1.png";
 	String reportPath = System.getProperty("user.dir") + "\\src\\main\\java\\reports\\test1.html";
 
